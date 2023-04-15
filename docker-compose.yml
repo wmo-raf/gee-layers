@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  eahw_analysis_gee:
+    image: eahazardswatch.icpac.net/eahw-analysis-gee:1.0
+    container_name: eahw_analysis_gee
+    restart: ${RESTART_POLICY}
+    volumes:
+      - ${GEE_HOST_PRIVATE_KEY_PATH}:${GEE_CONTAINER_PRIVATE_KEY_PATH}
+    environment:
+      - GEE_PRIVATE_KEY_PATH=${GEE_CONTAINER_PRIVATE_KEY_PATH}
+    ports:
+      - ${PORT}:3000

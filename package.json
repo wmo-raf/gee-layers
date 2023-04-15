@@ -1,0 +1,32 @@
+{
+  "name": "gee-layers",
+  "version": "1.0.0",
+  "description": "Connect to GEE Datasets",
+  "main": "index.js",
+  "author": "Erick Otenyo",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_PATH=app/src node app/index.js",
+    "dev": "NODE_PATH=app/src nodemon app/index.js"
+  },
+  "dependencies": {
+    "@google/earthengine": "^0.1.349",
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.21.0",
+    "bunyan": "^1.8.14",
+    "bunyan-format": "^0.2.1",
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
+    "googleapis": "^114.0.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.0.0",
+    "koa-simple-healthcheck": "^0.0.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
