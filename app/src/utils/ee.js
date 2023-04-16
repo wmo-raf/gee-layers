@@ -1,3 +1,6 @@
+const circle = require("@turf/circle");
+const polygonBuffer = require("@turf/buffer");
+
 const squareMetersToHectares = (value) => value / 10000;
 
 const squareMetersToAcres = (value) => value / 4046.8564224;
@@ -160,6 +163,12 @@ const createLegend = ({ min, max, palette }) => {
   });
 };
 
+const getBufferGeometry = ({ geometry }, buffer) =>
+  (geometry.type === "Point"
+    ? circle(geometry, buffer)
+    : polygonBuffer(geometry, buffer)
+  ).geometry;
+
 module.exports = {
   hasClasses,
   getInfo,
@@ -169,4 +178,5 @@ module.exports = {
   getClassifiedImage,
   getScale,
   createLegend,
+  getBufferGeometry,
 };

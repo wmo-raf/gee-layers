@@ -12,6 +12,8 @@
   "dependencies": {
     "@google/earthengine": "^0.1.349",
     "@koa/cors": "^3.1.0",
+    "@turf/buffer": "^6.5.0",
+    "@turf/circle": "^6.5.0",
     "axios": "^0.21.0",
     "bunyan": "^1.8.14",
     "bunyan-format": "^0.2.1",
